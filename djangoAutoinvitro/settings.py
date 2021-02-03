@@ -25,7 +25,7 @@ SECRET_KEY = ')e^1bk(u-@tb!#^p)fobys*&2h&iu3jb1v#5))a6j0k4c)8n%0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['autoinvitro.std-271.ist.mospolytech.ru']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'autoinvitro.apps.AutoinvitroConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
