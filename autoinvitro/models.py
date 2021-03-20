@@ -72,4 +72,4 @@ class Posts(models.Model):
 class Events(models.Model):
     name = models.CharField(max_length=150)
     location = models.CharField(max_length=150)
-    date = models.CharField(max_length=15)
+    date = models.CharField(max_length=25)
