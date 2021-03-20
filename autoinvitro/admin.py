@@ -3,7 +3,7 @@ from django.contrib import admin
 # Register your models here.
 
 from django.contrib import admin
-from .models import News, Notification, Sale, SaleItem, Car, Forum, Posts
+from .models import News, Notification, Sale, SaleItem, Car, Forum, Posts, Events
 
 # Register your models here.
 
@@ -62,6 +62,10 @@ class PostsAdmin(admin.ModelAdmin):
     list_filter = ('author',)
 
 
+class EventsAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'location', 'date')
+
+
 admin.site.register(News, NewsAdmin)
 admin.site.register(Notification, NotificationAdmin)
 admin.site.register(Sale, SaleAdmin)
@@ -69,3 +73,4 @@ admin.site.register(SaleItem, SaleItemAdmin)
 admin.site.register(Car, CarAdmin)
 admin.site.register(Forum, ForumAdmin)
 admin.site.register(Posts, PostsAdmin)
+admin.site.register(Events, EventsAdmin)

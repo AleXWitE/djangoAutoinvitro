@@ -67,3 +67,9 @@ class Posts(models.Model):
     author = models.CharField(max_length=50)
     description = models.CharField(max_length=4000, blank=True)
     date = models.DateTimeField(auto_now_add=True)
+
+
+class Events(models.Model):
+    name = models.CharField(max_length=150)
+    location = models.CharField(max_length=150)
+    date = models.CharField(max_length=15)

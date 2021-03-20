@@ -1,6 +1,6 @@
-from .models import News, Notification, Sale, SaleItem, Car, Forum, Posts
+from .models import News, Notification, Sale, SaleItem, Car, Forum, Posts, Events
 from rest_framework import viewsets, permissions
-from .serializers import NewsSerializer, NotificationSerializer, SaleSerializer, SaleItemSerializer, CarSerializer, ForumSerializer, PostsSerializer
+from .serializers import NewsSerializer, NotificationSerializer, SaleSerializer, SaleItemSerializer, CarSerializer, ForumSerializer, PostsSerializer,EventsSerializer
 
 
 class NewsViewSet(viewsets.ModelViewSet):
@@ -57,3 +57,11 @@ class PostsViewSet(viewsets.ModelViewSet):
         permissions.AllowAny
     ]
     serializer_class = PostsSerializer
+
+
+class EventsViewSet(viewsets.ModelViewSet):
+    queryset = Events.objects.all()
+    permission_classes = [
+        permissions.AllowAny
+    ]
+    serializer_class = EventsSerializer

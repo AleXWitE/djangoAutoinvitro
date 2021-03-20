@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import News, Notification, Sale, SaleItem, Car, Forum, Posts
+from .models import News, Notification, Sale, SaleItem, Car, Forum, Posts, Events
 
 
 class NewsSerializer(serializers.ModelSerializer):
@@ -41,4 +41,10 @@ class ForumSerializer(serializers.ModelSerializer):
 class PostsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Posts
+        fields = '__all__'
+
+
+class EventsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Events
         fields = '__all__'
